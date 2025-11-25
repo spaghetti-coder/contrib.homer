@@ -334,6 +334,13 @@
       },
       "description": "Will load custom CSS files. Especially useful for custom icon sets. Entries are paths to the stylesheets"
     },
+    "javascript": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Will load custom JavaScript files attached before closing body tag."
+    },
     "colors": {
       "$ref": "#/definitions/Colors"
     },

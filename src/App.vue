@@ -199,6 +199,14 @@ export default {
         }
         this.createStylesheet(stylesheet);
       }
+
+      if (this.config.javascript) {
+        let javascripts = this.config.javascript;
+        if (!Array.isArray(javascripts)) {
+          javascripts = [javascripts]
+        }
+        this.createJavascripts(javascripts);
+      }
     },
     getConfig: function (path = "assets/config.yml") {
       return fetch(path).then((response) => {
@@ -283,6 +291,14 @@ export default {
       style.appendChild(document.createTextNode(css));
       document.head.appendChild(style);
     },
+    createJavascripts: function (javascripts) {
+      let scriptObj;
+      for (const script of javascripts) {
+        scriptObj = document.createElement('script');
+        scriptObj.setAttribute('src', script);
+        document.body.appendChild(scriptObj);
+      }
+    }
   },
 };
 </script>

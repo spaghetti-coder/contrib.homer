@@ -56,6 +56,11 @@ theme: default # 'default' or one of the themes available in 'src/assets/themes'
 # stylesheet:
 #   - "assets/custom.css"
 
+# Optional custom JavaScript
+# Can be used to modify / extend default app behavior for individual usecases.
+# javascript:
+#   - "assets/custom.js"
+
 # Here is the exhaustive list of customization parameters
 # However all value are optional and will fallback to default if not set.
 # if you want to change only some of the colors, feel free to remove all unused key.
